@@ -24,6 +24,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val sectionPagerAdapter = SectionPagerAdapter(this)
+        sectionPagerAdapter.appName = resources.getString(R.string.app_name) // memasukkan data yg ingin dikirimkan dr Activity ke Adapter
         val viewPager: ViewPager2 = findViewById(R.id.view_pager)
         viewPager.adapter = sectionPagerAdapter
         val tabs: TabLayout = findViewById(R.id.tabs)
